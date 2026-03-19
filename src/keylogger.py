@@ -13,13 +13,18 @@ from pathlib import Path
 class Keylogger:
     """Basic keylogger class that captures and logs keystrokes"""
     
-    def __init__(self, log_file="logs/keylog.txt"):
+    def __init__(self, log_file=None):
         """
         Initialize the keylogger
         
         Args:
-            log_file (str): Path where keystrokes will be logged
+            log_file (str): Path where keystrokes will be logged (auto-generated if None)
         """
+        # If no log file specified, generate one with timestamp
+        if log_file is None:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            log_file = f"logs/keylog_{timestamp}.txt"
+        
         self.log_file = log_file
         self.listener = None
         self.is_running = False
